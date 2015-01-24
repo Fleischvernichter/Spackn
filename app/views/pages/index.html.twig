@@ -1,0 +1,28 @@
+{% extends '/templates/layout.html.twig' %}
+
+{% block body %}
+    <div class="block">
+        <h1 class="title">Willkommen</h1>
+        <div>
+            Moin liebe Sportfreunde,<br />
+            viel spaß und freude bei unser Challenge.
+        </div>
+
+        <div>
+            Teilnehmer:
+        </div>
+        <div>
+
+            {% for user in userList %}
+                <div class="user">
+                    <div class="user_name">{{ user.name }}</div>
+                    <div class="user_points">{{ user.points }}</div>
+                    <div class="user_winns">{{ user.winns }}</div>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+{% endblock %}

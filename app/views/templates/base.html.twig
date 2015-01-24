@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="{{ _charset }}" />
+        <meta name="robots" content="noindex,nofollow" />
+        <title>{% block title %}{% endblock %}</title>
+        <link href="/resources/css/structure.css" rel="stylesheet" />
+        <link href="/resources/css/body.css" rel="stylesheet" />
+        {% block head %}{% endblock %}
+    </head>
+    <body>
+        <div id="content">
+            <div class="header clear-fix">
+                <div class="header-logo">
+                    <img class="header-logo-left-img" src="resources/images/logo.png"/>
+                </div>
+                <div class="header-logo-right">
+                    <img class="header-logo-right-img" src="/resources/images/strongarm.png" />
+                </div>
+            </div>
+
+            <div class="sf-reset">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>
